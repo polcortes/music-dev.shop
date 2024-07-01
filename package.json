@@ -6,11 +6,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npm-run-all -p frontend:dev backend:dev",
-    "frontend:dev": "cd client && npm run start",
+    "frontend:dev": "cd client && npm run dev",
     "backend:dev": "cd api && npm run dev",
     "build": "npm-run-all -p frontend:build backend:build",
     "frontend:build": "cd client && npm run build && npm run preview",
-    "backend:build": "cd api && npm run build"
+    "backend:build": "cd api && npm run build",
+    "install": "npm-run-all -p frontend:install backend:install",
+    "frontend:install": "cd client && npm install",
+    "backend:install": "cd api && npm install"
   },
   "author": "Pol Cortés",
   "license": "ISC",
